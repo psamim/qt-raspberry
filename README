@@ -1,0 +1,10 @@
+# Deploy Qt
+When qt-souce is checked out, run the following to deploy qt to pi.
+
+1. init-repository-before-configure
+2. configure-qt-before-make
+3. make
+4. make install
+5. sync-from-host-to-pi.sh 
+
+# Check .envrc for env vars.
