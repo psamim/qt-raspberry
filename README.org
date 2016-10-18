@@ -1,12 +1,16 @@
 * Configurations
  Configuration settings are done using env vars. You can source =.envrc= or 
 use [[https://github.com/direnv/direnv][direnv]].
-
-* Deploy Qt
+* Get Libraries
+1. Get libraries and sysroot from Raspbian to host by running =sync-from-pi-to-host.sh=.
+2. Correct relative links by running =sysroot-relativelinks.py $SYSROOT=.
+* Make and Deploy Qt
 When qt-souce is checked out, run the following to deploy qt to pi.
 
-1. init-repository-before-configure
-2. configure-qt-before-make
-3. make
-4. make install
+Sometimes checking out the stable branch helps, in qt-source run =qt5_tool -p --Branch stable=.
+
+1. init-repository-before-configure.sh
+2. configure-qt-before-make.sh
+3. make -j4 (in qt-source)
+4. make install (in qt-source)
 5. sync-from-host-to-pi.sh 
