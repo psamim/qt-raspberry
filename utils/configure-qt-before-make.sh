@@ -8,7 +8,10 @@ cd $QT_SOURCE
             -sysroot $SYSROOT \
             -opensource -confirm-license \
             -make libs \
+            -make tools \
+            -nomake tests \
             -prefix $PREFIX_TARGET \
             -extprefix $PREFIX_HOST \
             -hostprefix $PREFIX_HOST_BUILD_TOOLS \
+            -platform linux-g++-64 \
             -v
