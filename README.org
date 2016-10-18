@@ -1,7 +1,10 @@
+Using  https://wiki.qt.io/RaspberryPi2EGLFS
+
 * Configurations
- Configuration settings are done using env vars. You can source =.envrc= or 
-use [[https://github.com/direnv/direnv][direnv]].
+  Configuration settings are done using env vars. You can source =.envrc= or 
+ use [[https://github.com/direnv/direnv][direnv]].
 * Get Libraries
+1. Download Raspbian and follow the above guide to install needed packages.
 1. Get libraries and sysroot from Raspbian to host by running =sync-from-pi-to-host.sh=.
 2. Correct relative links by running =sysroot-relativelinks.py $SYSROOT=.
 * Make and Deploy Qt
