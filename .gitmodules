@@ -1,3 +1,7 @@
 [submodule "qt-source"]
 	path = qt-source
 	url = git://code.qt.io/qt/qt5.git
+[submodule "tools"]
+	path = tools
+	url = https://github.com/raspberrypi/tools
+
