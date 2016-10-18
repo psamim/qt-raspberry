@@ -1,4 +1,8 @@
-# Deploy Qt
+* Configurations
+ Configuration settings are done using env vars. You can source =.envrc= or 
+use [[https://github.com/direnv/direnv][direnv]].
+
+* Deploy Qt
 When qt-souce is checked out, run the following to deploy qt to pi.
 
 1. init-repository-before-configure
@@ -6,5 +10,3 @@ When qt-souce is checked out, run the following to deploy qt to pi.
 3. make
 4. make install
 5. sync-from-host-to-pi.sh 
-
-# Check .envrc for env vars.
