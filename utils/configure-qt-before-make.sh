@@ -10,7 +10,7 @@ cd $QT_SOURCE
             -make libs \
             -make tools \
             -nomake tests \
-            -nomake exmaple \
+            -nomake examples \
             -prefix $PREFIX_TARGET \
             -extprefix $PREFIX_HOST \
             -hostprefix $PREFIX_HOST_BUILD_TOOLS \

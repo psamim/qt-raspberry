@@ -1,19 +1,23 @@
-Using  https://wiki.qt.io/RaspberryPi2EGLFS
-
 * Configurations
   Configuration settings are done using env vars. You can source =.envrc= or 
  use [[https://github.com/direnv/direnv][direnv]].
-* Get Libraries
-1. Download Raspbian and follow the above guide to install needed packages.
-1. Get libraries and sysroot from Raspbian to host by running =sync-from-pi-to-host.sh=.
-2. Correct relative links by running =sysroot-relativelinks.py $SYSROOT=.
+ 
+* Steps
+1. Boot Raspbian up, run =raspi-config=, change it to boot to the console instead of X, change the GPU memory to 256 MB, make it auto-login, enable SSH.
+2. Copy =build= directory to Raspberry and run =build.sh= it as root.
+   
+* Get Libraries for Qt Installation
+2. Get libraries and sysroot from Raspbian to host by running =sync-from-pi-to-host.sh=.
+3. Correct relative links by running =sysroot-relativelinks.py $SYSROOT=.
+   
 * Make and Deploy Qt
-When qt-souce is checked out, run the following to deploy qt to pi.
-
-Sometimes checking out the stable branch helps, in qt-source run =qt5_tool -p --Branch stable=.
+When qt-source is checked out, run the following to deploy qt to pi (from utils).
 
 1. init-repository-before-configure.sh
 2. configure-qt-before-make.sh
 3. make -j4 (in qt-source)
 4. make install (in qt-source)
-5. sync-from-host-to-pi.sh 
+5. sync-from-host-to-pi.sh
+
+* Troubleshooting
+Sometimes checking out the stable branch helps, in qt-source run =qt5_tool -p --Branch stable=.
