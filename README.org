@@ -15,9 +15,11 @@ When qt-source is checked out, run the following to deploy qt to pi (from utils)
 
 1. init-repository-before-configure.sh
 2. configure-qt-before-make.sh
-3. make -j4 (in qt-source)
-4. make install (in qt-source)
-5. sync-from-host-to-pi.sh
+3. cd $QT_SOURCE;
+4. make -j4
+5. make install
+6. sync-from-host-to-pi.sh
 
 * Troubleshooting
-Sometimes checking out the stable branch helps, in qt-source run =qt5_tool -p --Branch stable=.
+Sometimes checking out the stable branch helps, in qt-source run =qt5_tool -p --Branch stable=;
+or =rm -rf $QT_SOURCE= then =git submodule update=.
