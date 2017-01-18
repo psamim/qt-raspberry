@@ -4,13 +4,13 @@
  
 * Steps
 1. Boot Raspbian up, run =raspi-config=, change it to boot to the console instead of X, change the GPU memory to 256 MB, make it auto-login, enable SSH.
-2. Copy =build= directory to Raspberry and run =build.sh= it as root.
-   
-* Get Libraries for Qt Installation
+2. With a working SSH connection to device run =ssh pi@$IP 'sudo bash -s' < build.sh= 
+
+* Get Libraries for Compiling Qt on Desktop PC
 2. Get libraries and sysroot from Raspbian to host by running =sync-from-pi-to-host.sh=.
 3. Correct relative links by running =sysroot-relativelinks.py $SYSROOT=.
    
-* Make and Deploy Qt
+* Compile and Deploy Qt to Raspberry
 When qt-source is checked out, run the following to deploy qt to pi (from utils).
 
 1. init-repository-before-configure.sh
